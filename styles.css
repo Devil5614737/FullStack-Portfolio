@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  -webkit-transition: all 0.4s cubic-bezier(0.89, 0.1, 0.45, 0.27);
+  transition: all 0.4s cubic-bezier(0.89, 0.1, 0.45, 0.27);
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+input,
+textarea {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header .wrapper {
+  background-color: #0b32ff;
+  width: 100vw;
+  height: 80vh;
+}
+
+header .wrapper nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.3em 1em;
+}
+
+header .wrapper nav .logo {
+  font-weight: bold;
+  font-size: 2.3em;
+  cursor: pointer;
+  color: #ff0075;
+}
+
+header .wrapper nav .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .wrapper nav .right .themeBtn {
+  width: 60px;
+  border-radius: 20px;
+  height: 25px;
+  position: relative;
+  background-color: white;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .wrapper nav .right .themeBtn .switch {
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: blue;
+  cursor: pointer;
+}
+
+header .wrapper nav .right .themeBtn .switch.active {
+  background-color: black;
+  left: 0;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+header .wrapper nav .right .link {
+  font-weight: 500;
+  font-size: 1.6em;
+  margin-left: 34px;
+  color: white;
+  padding: 0.2em 1em;
+}
+
+header .wrapper nav .right .link:hover {
+  border-radius: 5px;
+  background: #0057ff;
+}
+
+header .wrapper .heroContent {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 0 0.5em;
+  margin-top: 33px;
+}
+
+header .wrapper .heroContent h1 {
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 5em;
+}
+
+header .wrapper .heroContent h1 span {
+  color: #ff0075;
+}
+
+header .wrapper .heroContent .projectBtn {
+  font-weight: bold;
+  font-size: 1.8em;
+  background: #000000;
+  border-radius: 6px;
+  color: white;
+  padding: 0.7em 1.7em;
+  margin-top: 17px;
+}
+
+header .wrapper .heroContent .projectBtn:hover {
+  -webkit-box-shadow: 5px 6px 19px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 5px 6px 19px 8px rgba(0, 0, 0, 0.25);
+}
+
+main {
+  margin-top: 44px;
+}
+
+main .projectSection {
+  background-color: #76ffe6;
+  position: relative;
+}
+
+main .projectSection::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-image: url("assets/bgOverlay.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+main .projectSection .wrapper {
+  padding: 3em 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+main .projectSection .wrapper .titleContainer .bar {
+  width: 50px;
+  height: 6px;
+  background-color: blue;
+  border-radius: 20px;
+}
+
+main .projectSection .wrapper .titleContainer .title {
+  font-size: 2.4em;
+  font-weight: bold;
+}
+
+main .projectSection .wrapper .projects {
+  margin-top: 42px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 19px 19px;
+}
+
+main .projectSection .wrapper .projects .project {
+  position: relative;
+}
+
+main .projectSection .wrapper .projects .project img {
+  border-radius: 12px;
+  width: 100%;
+}
+
+main .projectSection .wrapper .projects .project .info {
+  position: absolute;
+  top: 0;
+}
+
+main .projectSection .wrapper .projects .project .info p {
+  color: white;
+}
+
+main .projectSection .wrapper .projects .project .info .tags p {
+  color: white;
+}
+
+main .skillSection {
+  margin-top: 84px;
+}
+
+main .skillSection .wrapper {
+  padding: 3em 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+main .skillSection .wrapper::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-image: url("assets/bgOverlay2.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+main .skillSection .wrapper .titleContainer .bar {
+  width: 30px;
+  height: 6px;
+  background-color: blue;
+  border-radius: 20px;
+}
+
+main .skillSection .wrapper .titleContainer .title {
+  font-size: 2.4em;
+  font-weight: bold;
+}
+
+main .skillSection .wrapper .skillsContainer {
+  margin-top: 44px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-gap: 55px 55px;
+  position: relative;
+  z-index: 1;
+}
+
+main .skillSection .wrapper .skillsContainer .skills img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+main .skillSection .wrapper .skillsContainer .skills p {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+main .contactSection {
+  margin-top: 99px;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  border-radius: 114px 114px 0px 0px;
+  padding: 3em 1em;
+}
+
+main .contactSection .wrapper {
+  padding: 3em 1em;
+  max-width: 1200px;
+  margin: 0px auto;
+  position: relative;
+  z-index: 1;
+}
+
+main .contactSection .wrapper .titleContainer .bar {
+  width: 30px;
+  height: 6px;
+  background-color: blue;
+  border-radius: 20px;
+}
+
+main .contactSection .wrapper .titleContainer .title {
+  font-size: 2.4em;
+  font-weight: bold;
+}
+
+main .contactSection .wrapper form {
+  position: relative;
+  margin-top: 55px;
+  max-width: 70%;
+}
+
+main .contactSection .wrapper form label {
+  font-weight: 500;
+  font-size: 1.6em;
+}
+
+main .contactSection .wrapper form input {
+  margin-top: 12px;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 22px;
+  font-size: 1.7em;
+  padding: 0.3em;
+}
+
+main .contactSection .wrapper form input:nth-of-type(3) {
+  position: absolute;
+  right: 0;
+  width: 120px;
+  height: 40px;
+  background-color: blue;
+  color: white;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1.8em;
+}
+
+main .contactSection .wrapper form textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  font-size: 1.7em;
+  padding: 0.3em;
+  margin-top: 12px;
+}
+
+body.active {
+  background: #141414;
+}
+
+body.active .wrapper {
+  background: #0f0f0f;
+  color: white;
+}
+
+body.active #Vector {
+  fill: #0f0f0f;
+  position: relative;
+}
+
+body.active #wrapper2 {
+  background: #141414;
+}
+
+body.active #wrapper2::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-image: url("assets/bgOverlayDark.svg");
+  background-position: center;
+  background-size: cover;
+}
+/*# sourceMappingURL=styles.css.map */
