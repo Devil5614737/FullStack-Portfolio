@@ -8,3 +8,13 @@ const darkTheme = () => {
 };
 
 darkTheme();
+
+const hamburgerMenu = () => {
+  const menuBtn = document.querySelector(".hamburger");
+  const menu = document.querySelector(".right2");
+  menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    menu.classList.toggle("active");
+  });
+};
+hamburgerMenu();
