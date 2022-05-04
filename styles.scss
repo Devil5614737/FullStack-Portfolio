@@ -66,12 +66,18 @@ header {
       display: grid;
       place-items: center;
       padding: 0 0.5em;
-      margin-top: 33px;
+      margin-top: 53px;
       h1 {
         color: white;
         text-align: center;
         font-weight: 700;
         font-size: 5em;
+        @media screen and (max-width: 650px) {
+          font-size: 4em;
+        }
+        &::selection {
+          background: #ff0075;
+        }
         span {
           color: #ff0075;
         }
@@ -85,6 +91,10 @@ header {
         color: white;
         padding: 0.7em 1.7em;
         margin-top: 17px;
+        @media screen and (max-width: 650px) {
+          font-size: 1.5em;
+          padding: 0.7em 1.7em;
+        }
         &:hover {
           box-shadow: 5px 6px 19px 8px rgba(0, 0, 0, 0.25);
         }
@@ -132,6 +142,12 @@ main {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 19px 19px;
+        @media screen and (max-width: 650px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width: 550px) {
+          grid-template-columns: repeat(1, 1fr);
+        }
         .project {
           position: relative;
           img {
@@ -193,6 +209,12 @@ main {
         grid-gap: 55px 55px;
         position: relative;
         z-index: 1;
+        @media screen and (max-width: 650px) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        @media screen and (max-width: 550px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
 
         .skills {
           img {
@@ -211,11 +233,20 @@ main {
   .contactSection {
     margin-top: 99px;
     background-color: black;
-    border: 1px solid black;
     // height: fit-content;
     color: white;
     border-radius: 114px 114px 0px 0px;
     padding: 3em 1em;
+    @media screen and (max-width: 650px) {
+      padding: unset;
+      border-radius: 0;
+      padding-bottom: 5em;
+    }
+    @media screen and (max-width: 550px) {
+      padding: unset;
+      border-radius: 0;
+      padding-bottom: 5em;
+    }
     // height: 100vh;
     .wrapper {
       padding: 3em 1em;
@@ -242,6 +273,14 @@ main {
         position: relative;
         margin-top: 55px;
         max-width: 70%;
+        @media screen and (max-width: 650px) {
+          max-width: unset;
+          width: 100%;
+        }
+        @media screen and (max-width: 550px) {
+          max-width: unset;
+          width: 100%;
+        }
         label {
           font-weight: 500;
           font-size: 1.6em;
