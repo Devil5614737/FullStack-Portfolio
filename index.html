@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="HandheldFriendly" content="True" />
@@ -29,10 +28,7 @@
       content="blob:https://full-stack-portfolio-blond.vercel.app/"
     />
     <meta name="author" content="Kaushik sheel" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0 , user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kaushik Portfolio</title>
     <meta property="og:title" content="Full Stack Web Developer Portfolio" />
     <meta
@@ -62,9 +58,27 @@
       href="/assets/favicon.svg"
     />
     <meta name="theme-color" content="#454e56" />
-    <title>Portfolio</title>
+
     <link rel="stylesheet" href="styles.css" />
     <script defer src="index.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
+      integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"
+      integrity="sha512-lZACdYsy0W98dOcn+QRNHDxFuhm62lfs8qK5+wPp7X358CN3f+ml49HpnwzTiXFzETs4++fADePDI+L2zwlm7Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
     <header>
@@ -136,6 +150,14 @@
                   <p>Tailwind</p>
                   <p>Firebase</p>
                 </div>
+                <div class="socialLinks">
+                  <a href="#" title="github" class="link">
+                    <img src="assets/githubIcon.svg" alt="icon" />
+                  </a>
+                  <a href="#" title="github" class="link">
+                    <img src="assets/redirectIcon.svg" alt="icon" />
+                  </a>
+                </div>
               </div>
             </div>
             <div class="project">
@@ -147,6 +169,14 @@
                   <p>Css</p>
                   <p>Javascript</p>
                 </div>
+                <div class="socialLinks">
+                  <a href="#" title="github" class="link">
+                    <img src="assets/githubIcon.svg" alt="icon" />
+                  </a>
+                  <a href="#" title="github" class="link">
+                    <img src="assets/redirectIcon.svg" alt="icon" />
+                  </a>
+                </div>
               </div>
             </div>
             <div class="project">
@@ -156,6 +186,14 @@
                 <div class="tags">
                   <p>Next.js</p>
                   <p>Sass</p>
+                </div>
+                <div class="socialLinks">
+                  <a href="#" title="github" class="link">
+                    <img src="assets/githubIcon.svg" alt="icon" />
+                  </a>
+                  <a href="#" title="github" class="link">
+                    <img src="assets/redirectIcon.svg" alt="icon" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -167,6 +205,14 @@
                   <p>React</p>
                   <p>Sass</p>
                   <p>Firebase</p>
+                </div>
+                <div class="socialLinks">
+                  <a href="#" title="github" class="link">
+                    <img src="assets/githubIcon.svg" alt="icon" />
+                  </a>
+                  <a href="#" title="github" class="link">
+                    <img src="assets/redirectIcon.svg" alt="icon" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -180,6 +226,14 @@
                   <p>Node.js</p>
                   <p>MongoDb</p>
                 </div>
+                <div class="socialLinks">
+                  <a href="#" title="github" class="link">
+                    <img src="assets/githubIcon.svg" alt="icon" />
+                  </a>
+                  <a href="#" title="github" class="link">
+                    <img src="assets/redirectIcon.svg" alt="icon" />
+                  </a>
+                </div>
               </div>
             </div>
             <div class="project">
@@ -189,6 +243,14 @@
                 <div class="tags">
                   <p>Next.js</p>
                   <p>Sass</p>
+                </div>
+                <div class="socialLinks">
+                  <a href="#" title="github" class="link">
+                    <img src="assets/githubIcon.svg" alt="icon" />
+                  </a>
+                  <a href="#" title="github" class="link">
+                    <img src="assets/redirectIcon.svg" alt="icon" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -244,13 +306,13 @@
             <p class="title">Contact</p>
           </div>
           <div class="icons"></div>
-          <form action="">
+          <form>
             <label for="name">Name</label>
             <input type="text" id="name" />
             <label for="email">Email</label>
-            <input type="email" id="Email" />
+            <input type="email" id="email" />
             <label for="message">Message</label>
-            <textarea name="message" id="message"></textarea>
+            <textarea id="message"></textarea>
             <input type="submit" value="submit" />
           </form>
         </div>

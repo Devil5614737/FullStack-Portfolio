@@ -108,25 +108,18 @@ header {
     @media screen and (max-width: 550px) {
       display: none;
     }
+    @media screen and (min-width: 1512px) {
+      display: none;
+    }
   }
 }
 
 main {
-  margin-top: 44px;
+  margin-top: 94px;
   .projectSection {
     background-color: #76ffe6;
     position: relative;
-    &::before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      position: absolute;
-      background-image: url("assets/bgOverlay.svg");
-      background-position: center;
-      background-size: cover;
-    }
+
     .wrapper {
       padding: 3em 1em;
       max-width: 1200px;
@@ -158,20 +151,80 @@ main {
         }
         .project {
           position: relative;
+          overflow: hidden;
           box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+          cursor: pointer;
+          &:hover {
+            &::before {
+              content: "";
+              position: absolute;
+              background: black;
+              width: 100%;
+              height: 100%;
+              animation-name: clip;
+              animation-iteration-count: 1;
+              animation-duration: 0.4s;
+              transition: all 0.1s ease-in-out;
+              z-index: 1;
+              border-radius: 12px;
+            }
+            .info {
+              opacity: 1;
+              transition: all 0.4s ease-in-out;
+              animation-name: info;
+              animation-iteration-count: 1;
+              animation-duration: 0.6s;
+              // animation-delay: 0.4s;
+            }
+          }
           img {
             border-radius: 12px;
             width: 100%;
           }
           .info {
+            opacity: 0;
             position: absolute;
-            top: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 888;
             p {
               color: white;
+              font-size: 1.8em;
+              font-weight: bold;
+              text-align: center;
+              margin-bottom: 12px;
             }
             .tags {
+              display: flex;
+              align-items: center;
+              justify-content: center;
               p {
+                text-align: center;
                 color: white;
+                font-size: 1.3em;
+                font-weight: 500;
+                margin-right: 12px;
+              }
+            }
+            .socialLinks {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .link {
+                margin-right: 12px;
+                background-color: white;
+                width: 30px;
+                height: 30px;
+                display: grid;
+                place-items: center;
+                align-items: center;
+                border-radius: 100%;
+                img {
+                  width: 22px;
+                  height: 22px;
+                  object-fit: contain;
+                }
               }
             }
           }
@@ -199,6 +252,8 @@ main {
         background-size: cover;
       }
       .titleContainer {
+        position: relative;
+        z-index: 4244;
         .bar {
           width: 30px;
           height: 6px;
@@ -211,6 +266,8 @@ main {
         }
       }
       .skillsContainer {
+        position: relative;
+        z-index: 4244;
         margin-top: 44px;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -244,7 +301,7 @@ main {
     background-color: black;
     // height: fit-content;
     color: white;
-    border-radius: 114px 114px 0px 0px;
+    border-radius: 66px 66px 0px 0px;
     padding: 3em 1em;
     @media screen and (max-width: 650px) {
       padding: unset;
@@ -337,33 +394,38 @@ body.active {
     fill: #0f0f0f;
     position: relative;
   }
-  // .projectSection {
-  //   background: #141414;
-  //   position: relative;
-  //   &::before {
-  //     content: "";
-  //     width: 100%;
-  //     height: 100%;
-  //     left: 0;
-  //     top: 0;
-  //     position: absolute;
-  //     background-image: url("assets/bgOverlayDark.svg");
-  //     background-position: center;
-  //     background-size: cover;
-  //   }
-  // }
+  .projectSection {
+    background: #141414;
+    position: relative;
+  }
   #wrapper2 {
     background: #141414;
+  }
+  .skillSection {
+    background: #141414;
+    position: relative;
     &::before {
       content: "";
+      background: url("assets/waveOverlay.svg");
       width: 100%;
       height: 100%;
+      position: absolute;
       left: 0;
       top: 0;
-      position: absolute;
-      background-image: url("assets/bgOverlayDark.svg");
-      background-position: center;
-      background-size: cover;
+      z-index: 321;
+    }
+    .wrapper {
+      background: #141414;
+      .skillsContainer {
+        position: relative;
+        z-index: 4244;
+      }
+    }
+  }
+  .contactSection {
+    background: #141414;
+    .wrapper {
+      background: #141414;
     }
   }
 }
@@ -441,4 +503,21 @@ body.active {
 }
 .right2.active {
   top: 10%;
+}
+
+@keyframes clip {
+  0% {
+    clip-path: circle(2% at 6% 90%);
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+@keyframes info {
+  0% {
+    margin-top: 72px;
+  }
+  100% {
+    margin-top: 0;
+  }
 }

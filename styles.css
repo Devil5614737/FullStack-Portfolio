@@ -189,25 +189,19 @@ header .wrapper .heroContent .projectBtn:hover {
   }
 }
 
+@media screen and (min-width: 1512px) {
+  header #wave {
+    display: none;
+  }
+}
+
 main {
-  margin-top: 44px;
+  margin-top: 94px;
 }
 
 main .projectSection {
   background-color: #76ffe6;
   position: relative;
-}
-
-main .projectSection::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  position: absolute;
-  background-image: url("assets/bgOverlay.svg");
-  background-position: center;
-  background-size: cover;
 }
 
 main .projectSection .wrapper {
@@ -255,8 +249,40 @@ main .projectSection .wrapper .projects {
 
 main .projectSection .wrapper .projects .project {
   position: relative;
+  overflow: hidden;
   -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+main .projectSection .wrapper .projects .project:hover::before {
+  content: "";
+  position: absolute;
+  background: black;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-name: clip;
+          animation-name: clip;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+main .projectSection .wrapper .projects .project:hover .info {
+  opacity: 1;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-animation-name: info;
+          animation-name: info;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }
 
 main .projectSection .wrapper .projects .project img {
@@ -265,16 +291,74 @@ main .projectSection .wrapper .projects .project img {
 }
 
 main .projectSection .wrapper .projects .project .info {
+  opacity: 0;
   position: absolute;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 888;
 }
 
 main .projectSection .wrapper .projects .project .info p {
   color: white;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+main .projectSection .wrapper .projects .project .info .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .projectSection .wrapper .projects .project .info .tags p {
+  text-align: center;
   color: white;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-right: 12px;
+}
+
+main .projectSection .wrapper .projects .project .info .socialLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .projectSection .wrapper .projects .project .info .socialLinks .link {
+  margin-right: 12px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100%;
+}
+
+main .projectSection .wrapper .projects .project .info .socialLinks .link img {
+  width: 22px;
+  height: 22px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 main .skillSection {
@@ -301,6 +385,11 @@ main .skillSection .wrapper::before {
   background-size: cover;
 }
 
+main .skillSection .wrapper .titleContainer {
+  position: relative;
+  z-index: 4244;
+}
+
 main .skillSection .wrapper .titleContainer .bar {
   width: 30px;
   height: 6px;
@@ -314,6 +403,8 @@ main .skillSection .wrapper .titleContainer .title {
 }
 
 main .skillSection .wrapper .skillsContainer {
+  position: relative;
+  z-index: 4244;
   margin-top: 44px;
   display: -ms-grid;
   display: grid;
@@ -354,7 +445,7 @@ main .contactSection {
   margin-top: 99px;
   background-color: black;
   color: white;
-  border-radius: 114px 114px 0px 0px;
+  border-radius: 66px 66px 0px 0px;
   padding: 3em 1em;
 }
 
@@ -464,20 +555,46 @@ body.active #Vector {
   position: relative;
 }
 
+body.active .projectSection {
+  background: #141414;
+  position: relative;
+}
+
 body.active #wrapper2 {
   background: #141414;
 }
 
-body.active #wrapper2::before {
+body.active .skillSection {
+  background: #141414;
+  position: relative;
+}
+
+body.active .skillSection::before {
   content: "";
+  background: url("assets/waveOverlay.svg");
   width: 100%;
   height: 100%;
+  position: absolute;
   left: 0;
   top: 0;
-  position: absolute;
-  background-image: url("assets/bgOverlayDark.svg");
-  background-position: center;
-  background-size: cover;
+  z-index: 321;
+}
+
+body.active .skillSection .wrapper {
+  background: #141414;
+}
+
+body.active .skillSection .wrapper .skillsContainer {
+  position: relative;
+  z-index: 4244;
+}
+
+body.active .contactSection {
+  background: #141414;
+}
+
+body.active .contactSection .wrapper {
+  background: #141414;
 }
 
 .hamburger {
@@ -584,5 +701,45 @@ body.active #wrapper2::before {
 
 .right2.active {
   top: 10%;
+}
+
+@-webkit-keyframes clip {
+  0% {
+    -webkit-clip-path: circle(2% at 6% 90%);
+            clip-path: circle(2% at 6% 90%);
+  }
+  100% {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+}
+
+@keyframes clip {
+  0% {
+    -webkit-clip-path: circle(2% at 6% 90%);
+            clip-path: circle(2% at 6% 90%);
+  }
+  100% {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+}
+
+@-webkit-keyframes info {
+  0% {
+    margin-top: 72px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes info {
+  0% {
+    margin-top: 72px;
+  }
+  100% {
+    margin-top: 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
