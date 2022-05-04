@@ -176,6 +176,18 @@ header .wrapper .heroContent .projectBtn:hover {
           box-shadow: 5px 6px 19px 8px rgba(0, 0, 0, 0.25);
 }
 
+@media screen and (max-width: 650px) {
+  header #wave {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  header #wave {
+    display: none;
+  }
+}
+
 main {
   margin-top: 44px;
 }
@@ -223,7 +235,7 @@ main .projectSection .wrapper .projects {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  grid-gap: 19px 19px;
+  grid-gap: 49px 49px;
 }
 
 @media screen and (max-width: 650px) {
@@ -242,6 +254,8 @@ main .projectSection .wrapper .projects {
 
 main .projectSection .wrapper .projects .project {
   position: relative;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 main .projectSection .wrapper .projects .project img {
