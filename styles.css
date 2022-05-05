@@ -38,7 +38,7 @@ html {
 header .wrapper {
   background-color: #0b32ff;
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
 }
 
 header .wrapper nav {
@@ -126,7 +126,7 @@ header .wrapper .heroContent {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  padding: 0 0.5em;
+  padding: 0 2em;
   margin-top: 53px;
 }
 
@@ -512,11 +512,18 @@ main .contactSection .wrapper form label {
 
 main .contactSection .wrapper form input {
   margin-top: 12px;
+  background-color: transparent;
+  border: 2px solid #424242;
   width: 100%;
   height: 60px;
   margin-bottom: 22px;
   font-size: 1.7em;
   padding: 0.3em;
+  color: white;
+}
+
+main .contactSection .wrapper form input:focus {
+  outline: none;
 }
 
 main .contactSection .wrapper form input:nth-of-type(3) {
@@ -539,6 +546,13 @@ main .contactSection .wrapper form textarea {
   font-size: 1.7em;
   padding: 0.3em;
   margin-top: 12px;
+  background-color: transparent;
+  border: 2px solid #424242;
+  color: white;
+}
+
+main .contactSection .wrapper form textarea:focus {
+  outline: none;
 }
 
 body.active {

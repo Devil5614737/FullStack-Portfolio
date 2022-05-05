@@ -1,19 +1,10 @@
 const darkTheme = () => {
   const btn = document.querySelector(".switch");
-
-  if (localStorage.getItem("darkTheme")) {
-    document.body.classList.add("active");
-  } else {
-    document.body.classList.remove("active");
-  }
   btn.addEventListener("click", () => {
-    localStorage.setItem("darkTheme", "true");
     btn.classList.toggle("active");
     document.body.classList.toggle("active");
-    if (localStorage.getItem("darkTheme")) {
-      localStorage.removeItem("darkTheme");
-    }
   });
+  // localStorage.setItem("darkMode", "true");
 };
 
 darkTheme();
@@ -29,35 +20,35 @@ const hamburgerMenu = () => {
 hamburgerMenu();
 // gsap animations
 
-gsap.from(".projectSection", {
-  scrollTrigger: ".projectSection", // start the animation when ".box" enters the viewport (once)
-  opacity: 0,
-  x: 500,
-  delay: 0.3,
-});
+// gsap.from(".projectSection", {
+//   scrollTrigger: ".projectSection", // start the animation when ".box" enters the viewport (once)
+//   opacity: 0,
+//   x: 500,
+//   delay: 0.3,
+// });
 
-gsap.from(".skillSection", {
-  scrollTrigger: ".skillSection", // start the animation when ".box" enters the viewport (once)
-  x: -500,
-});
-gsap.from(".contactSection", {
-  scrollTrigger: ".contactSection", // start the animation when ".box" enters the viewport (once)
-  x: 500,
-});
+// gsap.from(".skillSection", {
+//   scrollTrigger: ".skillSection", // start the animation when ".box" enters the viewport (once)
+//   x: -500,
+// });
+// gsap.from(".contactSection", {
+//   scrollTrigger: ".contactSection", // start the animation when ".box" enters the viewport (once)
+//   x: 500,
+// });
 
-gsap.from(".project", {
-  // start the animation when ".box" enters the viewport (once)
-  opacity: 0,
-  // x: 500,
-  delay: 0.4,
-  stagger: 0.3,
-  y: 12,
-});
-gsap.from(".skills", {
-  // start the animation when ".box" enters the viewport (once)
-  opacity: 0,
-  // x: 500,
-  delay: 0.4,
-  stagger: 0.3,
-  y: 12,
-});
+// gsap.from(".project", {
+//   // start the animation when ".box" enters the viewport (once)
+//   opacity: 0,
+//   // x: 500,
+//   delay: 0.4,
+//   stagger: 0.3,
+//   y: 12,
+// });
+// gsap.from(".skills", {
+//   // start the animation when ".box" enters the viewport (once)
+//   opacity: 0,
+//   // x: 500,
+//   delay: 0.4,
+//   stagger: 0.3,
+//   y: 12,
+// });
